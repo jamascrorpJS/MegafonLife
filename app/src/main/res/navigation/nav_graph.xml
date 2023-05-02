@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aviaticketsFragment">
+
+    <fragment
+        android:id="@+id/aviaticketsFragment"
+        android:name="com.jamascrorp.megafonlife.AviaticketsFragment"
+        android:label="fragment_aviatickets"
+        tools:layout="@layout/fragment_aviatickets" >
+        <action
+            android:id="@+id/action_aviaticketsFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_aviaticketsFragment_to_calendars"
+            app:destination="@id/calendars" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.jamascrorp.megafonlife.calendar_fragment.CalendarFragment"
+        android:label="CalendarFragment" >
+        <action
+            android:id="@+id/action_calendarFragment_to_aviaticketsFragment"
+            app:destination="@id/aviaticketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendars"
+        android:name="com.jamascrorp.megafonlife.Calendars"
+        android:label="Calendars" />
+</navigation>
